@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Management - Documents</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="page" class="d-flex gap-3">
+  <!-- Side Bar -->
+  <div id="sidebar">
+    <div class="sidebar_menu">
+        <h6>CUSTOMER SCREEN</h6>
+
+        <ul class="dropdown_menu">
+            <li><a href="/cus-location.html">Location</a></li>
+            <li><a href="/cus-document.html">Documents</a></li>
+            <li><a href="/cus-accounting.html">Accounting</a></li>
+            <li><a href="/cus-portal.html">Portal</a></li>
+        </ul>
+    </div>
+    <div class="sidebar_menu">
+        <h6>CUSTOMER SCREEN 2</h6>
+
+        <ul class="dropdown_menu">
+            <li><a href="">Location</a></li>
+            <li><a href="">Documents</a></li>
+            <li><a href="">Accounting</a></li>
+            <li><a href="">Portal</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Side Bar -->
+
+<div id="side_page">
+  <div class="container mt-5">
+    <h2>Customer Management - Documents</h2>
+
+    <div class="row">
+      <!-- Left Sidebar Tabs -->
+      <div class="col-md-3">
+        <ul class="nav flex-column nav-pills" id="customerTab" role="tablist" aria-orientation="vertical">
+          <li class="nav-item">
+            <button class="nav-link" id="customer-overview-tab" data-bs-toggle="pill" data-bs-target="#overview" type="button">Overview</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="location-tab" data-bs-toggle="pill" data-bs-target="#location" type="button">Location</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link active" id="documents-tab" data-bs-toggle="pill" data-bs-target="#documents" type="button">Documents</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="accounting-tab" data-bs-toggle="pill" data-bs-target="#accounting" type="button">Accounting</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" id="portal-tab" data-bs-toggle="pill" data-bs-target="#portal" type="button">Portal</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Documents Form Section -->
+      <div class="col-md-9">
+        <div class="tab-content" id="customerTabContent">
+          <!-- Documents Tab Content -->
+          <div class="tab-pane fade show active" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+            <form>
+              <h4>Upload and Manage Documents</h4>
+
+              <!-- Location Selection -->
+              <div class="mb-3">
+                <label for="locationSelect" class="form-label">Select Location</label>
+                <select id="locationSelect" class="form-select">
+                  <option>Main Office</option>
+                  <option>Warehouse</option>
+                  <option>Storefront</option>
+                </select>
+              </div>
+
+              <!-- Document Type and Expiry Date -->
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="documentType" class="form-label">Document Type</label>
+                  <select id="documentType" class="form-select">
+                    <option>Contract</option>
+                    <option>Insurance Proof</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="expiryDate" class="form-label">Insurance Expires On</label>
+                  <input type="date" id="expiryDate" class="form-control">
+                </div>
+              </div>
+
+              <!-- File Upload -->
+              <div class="mt-3">
+                <label for="uploadFile" class="form-label">Select File</label>
+                <input type="file" id="uploadFile" class="form-control">
+              </div>
+
+              <!-- Active Toggle -->
+              <div class="form-check form-switch mt-2">
+                <input class="form-check-input" type="checkbox" id="isActive">
+                <label class="form-check-label" for="isActive">Is Active?</label>
+              </div>
+
+              <!-- Upload Button -->
+              <button type="submit" class="btn btn-primary mt-3">Upload Document</button>
+            </form>
+
+            <!-- Uploaded Documents List -->
+            <div class="mt-4">
+              <h5>Existing Documents</h5>
+              <ul class="list-group">
+                <!-- Example document item -->
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Contract - Main Office</strong>
+                    <br>
+                    <small>Expires: 2025-01-01</small>
+                  </div>
+                  <button class="btn btn-sm btn-danger">Remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Insurance Proof - Warehouse</strong>
+                    <br>
+                    <small>Expires: 2024-12-01</small>
+                  </div>
+                  <button class="btn btn-sm btn-danger">Remove</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<script src="/app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
