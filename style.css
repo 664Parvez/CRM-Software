@@ -1,0 +1,35 @@
+/* Side Bar */
+#sidebar {
+    background: #664789;
+    width: calc(100% - 80%);
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+#sidebar .sidebar_menu h6 {
+    color: #ffffff;
+}
+#sidebar .sidebar_menu ul {
+    list-style: none;
+}
+#sidebar .sidebar_menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.sidebar_menu {
+    cursor: pointer;
+}
+.dropdown_menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+.dropdown_menu.open {
+    max-height: 200px;
+}
+/* Side Bar */
+
+#side_page {
+    width: calc(100% - 20%);
+    margin-left: calc(100% - 80%);
+}
